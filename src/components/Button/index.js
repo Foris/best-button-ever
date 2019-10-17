@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './style.scss'
 
 const Button = () => {
+
+  const [count, setCount] = useState(0);
+
   return (
-    <button>Hola!</button>
+    <button onClick={() => setCount(count + 1)}> Hola! {count} </button>
   )
 }
 
